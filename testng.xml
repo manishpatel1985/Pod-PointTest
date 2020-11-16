@@ -3,7 +3,7 @@
 <suite name="TestSuite">
     <listeners>
         <listener class-name="TestListeners.CustomListener"/>
-       <!--  <listener class-name="TestListeners.MyTransformer"/> -->
+         <listener class-name="TestListeners.MyTransformer"/>
         <listener class-name="TestListeners.ExtentReportListener"/>
     </listeners>
     <test thread-count="2" name="PodPointPriceTest">
