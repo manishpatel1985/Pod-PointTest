@@ -12,8 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 /*
-
-
+ No new changes has been made today
  */
 
 public class MainPage extends BaseClass {
