@@ -22,7 +22,7 @@ formatter.match({
   "location": "PodpointJourney.user_navigate_to_pod_point_checkout_page()"
 });
 formatter.result({
-  "duration": 8802784700,
+  "duration": 8295530900,
   "status": "passed"
 });
 formatter.scenario({
@@ -67,42 +67,42 @@ formatter.match({
   "location": "PodpointJourney.user_selects_Mitsubishi_Outlander_as_a_Car_Model()"
 });
 formatter.result({
-  "duration": 518892600,
+  "duration": 469602500,
   "status": "passed"
 });
 formatter.match({
   "location": "PodpointJourney.user_selects_not_eligible_to_claim_dealership_discount()"
 });
 formatter.result({
-  "duration": 1467941100,
+  "duration": 1807791600,
   "status": "passed"
 });
 formatter.match({
   "location": "PodpointJourney.user_selects_connection_type_as_Universal_Socket()"
 });
 formatter.result({
-  "duration": 2794728100,
+  "duration": 3072113600,
   "status": "passed"
 });
 formatter.match({
   "location": "PodpointJourney.user_selects_power_rating_price_for_seven_kilowatt_unit()"
 });
 formatter.result({
-  "duration": 2977098300,
+  "duration": 3246343600,
   "status": "passed"
 });
 formatter.match({
   "location": "PodpointJourney.user_checks_six_compatible_extras_are_shown_and_select_any_compatible_extra()"
 });
 formatter.result({
-  "duration": 3510972500,
+  "duration": 4533579500,
   "status": "passed"
 });
 formatter.match({
   "location": "PodpointJourney.user_Verify_Ensure_total_price_at_the_bottom_right_of_the_screen_matches_correctly()"
 });
 formatter.result({
-  "duration": 2056905100,
+  "duration": 2384965200,
   "status": "passed"
 });
 });
