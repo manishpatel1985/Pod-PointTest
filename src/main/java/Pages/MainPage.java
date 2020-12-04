@@ -31,6 +31,9 @@ public class MainPage extends BaseClass {
     @FindBy (id="optOut")
     WebElement optOutbutton;
 
+    @FindBy (id="optOut")
+    WebElement optOutbutton1;
+
     @FindBy(xpath = "//h4[text()='Universal Socket']")
     WebElement connectionType;
 
