@@ -11,14 +11,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
-
-
 public class MainPage extends BaseClass {
 
     public MainPage(){
-        PageFactory.initElements(driver, this);
-      
+    PageFactory.initElements(driver, this);
     }
+
+
 
     @FindBy(xpath = "//img[@class='icon__img']")
     WebElement clickCancel;
@@ -62,14 +61,14 @@ public class MainPage extends BaseClass {
     @FindBy(tagName = "strong")
     WebElement text;
 
-   @FindBy (tagName = "img")
-   WebElement covid19msg ;
+    @FindBy (tagName = "img")
+    WebElement covid19msg ;
 
-   @FindBy(xpath = "//h4[text()='Key lock']")
-   WebElement compitableExtra1;
+    @FindBy(xpath = "//h4[text()='Key lock']")
+    WebElement compitableExtra1;
 
-   @FindBy(xpath = "//h4[text()='5m Portable cable']")
-   WebElement compitableExtra2;
+    @FindBy(xpath = "//h4[text()='5m Portable cable']")
+    WebElement compitableExtra2;
 
     @FindBy(xpath = "//h4[text()='Extended warranty']")
     WebElement compitableExtra3;
@@ -85,53 +84,45 @@ public class MainPage extends BaseClass {
 
     public void clickToCancelmsg(){
         covid19msg.click();
-
     }
-    
-    
     public void selectCarFields(){
-       Select selectbrand = new Select(vehicleBrand);
-       selectbrand.selectByVisibleText(properties.getProperty("vehiclebrand"));
-
-       Select selectmodel = new Select(vehicleModel);
-       selectmodel.selectByVisibleText(properties.getProperty("vehiclemodel"));
+        Select selectbrand = new Select(vehicleBrand);
+        selectbrand.selectByVisibleText(properties.getProperty("vehiclebrand"));
+        Select selectmodel = new Select(vehicleModel);
+        selectmodel.selectByVisibleText(properties.getProperty("vehiclemodel"));
     }
-
     public void clickOnNotEligibleToClaimDealershipDiscountButton(){
-
-    	try {
-   	     optOutbutton.click();
-   	  } catch (Exception e) {
-   	     JavascriptExecutor executor = (JavascriptExecutor) driver;
-   	     executor.executeScript("arguments[0].click();", optOutbutton);
-   	  }
-    	
+        try
+        {
+   	    optOutbutton.click();
+   	    } catch (Exception e)
+        {
+   	    JavascriptExecutor executor = (JavascriptExecutor) driver;
+   	    executor.executeScript("arguments[0].click();", optOutbutton);
+   	    }
     }
-
     public void selectConnectionTypeAsUniversalSocket(){
-    	try {
-    		connectionType.click();
-    	  } catch (Exception e) {
-    	     JavascriptExecutor executor = (JavascriptExecutor) driver;
-    	    
-    	     executor.executeScript("arguments[0].click();", connectionType);
-    	  }
+    	try
+        {
+    	connectionType.click();
+    	} catch (Exception e)
+        {
+    	JavascriptExecutor executor = (JavascriptExecutor) driver;
+    	executor.executeScript("arguments[0].click();", connectionType);
+    	}
     }
-
     public boolean selectPowerRatingAs7Kw(){
-    	try {
-   	     powerRating.click();
-   	  } catch (Exception e) {
+    	try
+        {
+   	    powerRating.click();
+   	    } catch (Exception e) {
    	     JavascriptExecutor executor = (JavascriptExecutor) driver;
    	     executor.executeScript("arguments[0].click();", powerRating);
-   	  }
+   	    }
         fullPrice.isDisplayed();
         olevGrantPrice.isDisplayed();
         return text.isDisplayed();
     }
-
-
-
     public boolean checkCompatibleExtrasAreShown(){
         compitableExtra1.isDisplayed();
         compitableExtra2.isDisplayed();
@@ -140,9 +131,7 @@ public class MainPage extends BaseClass {
         compitableExtra5.isDisplayed();
         compitableExtra6.isDisplayed();
         return  compatibleExtra.isDisplayed();
-
     }
-
     public void selectHolsterAsCompatibleExtra(){
     	try {
    	     holster.click();
@@ -152,19 +141,10 @@ public class MainPage extends BaseClass {
    	     executor.executeScript("arguments[0].click();", holster);
    	  }
     }
-
-
     public boolean verifyTotalPriceAtTheBottomRightOfTheScreen(){
         clickToCancelmsg();
     	cookieButton.click();
     	totalUniversal7kwPrice.isDisplayed();
         return totalCompatibleExtra.isDisplayed();
-
     }
-
-
-
-
-
-
 }
